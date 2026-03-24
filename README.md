@@ -60,7 +60,7 @@ pip --version
 ## 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/CamiloArturo98/triage-system.git
 cd triage-system
 ```
 
@@ -221,10 +221,9 @@ Asegúrate de:
 
 # 👨‍💻 Autor
 
-Proyecto académico de sistema de triage desarrollado con arquitectura cliente-servidor.
+Proyecto académico de sistema de triage desarrollado con arquitectura cliente-servidor por Camilo Arturo.
 
 ---
 
 # 📄 Licencia
-
 Uso académico.
