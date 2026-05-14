@@ -1,28 +1,28 @@
-# 🏥 Sistema de Triage Hospitalario
+# Hospital Triage System
 
-Aplicación web para la clasificación de pacientes en un servicio de urgencias utilizando criterios básicos de triage.
+Web application designed to classify patients in an emergency service using basic triage criteria.
 
-Permite:
+The system allows users to:
 
-* Registrar pacientes
-* Clasificarlos por prioridad (ROJO, AMARILLO, VERDE)
-* Visualizar pacientes registrados
-* Ver estadísticas básicas
-
----
-
-# 🚀 Tecnologías utilizadas
-
-* **Backend:** FastAPI (Python)
-* **Frontend:** Streamlit
-* **Base de datos:** SQLite
-* **ORM:** SQLAlchemy
+- Register patients
+- Classify patients by priority level (RED, YELLOW, GREEN)
+- View registered patients
+- Display basic statistics
 
 ---
 
-# 📁 Estructura del proyecto
+# Technologies Used
 
-```
+- Backend: FastAPI (Python)
+- Frontend: Streamlit
+- Database: SQLite
+- ORM: SQLAlchemy
+
+---
+
+# Project Structure
+
+```text
 triage-system/
 │
 ├── backend/
@@ -41,12 +41,12 @@ triage-system/
 
 ---
 
-# ⚙️ Requisitos
+# Requirements
 
-* Python 3.10 o superior
-* pip
+- Python 3.10+
+- pip
 
-Verificar instalación:
+Verify installation:
 
 ```bash
 python --version
@@ -55,9 +55,9 @@ pip --version
 
 ---
 
-# 🧪 Instalación
+# Installation
 
-## 1. Clonar el repositorio
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/CamiloArturo98/triage-system.git
@@ -66,21 +66,21 @@ cd triage-system
 
 ---
 
-## 2. Crear entorno virtual (RECOMENDADO)
+## 2. Create Virtual Environment (Recommended)
 
 ```bash
 python -m venv venv
 ```
 
-### Activar entorno
+### Activate Environment
 
-#### Windows:
+#### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-#### Linux / Mac:
+#### Linux / macOS
 
 ```bash
 source venv/bin/activate
@@ -88,7 +88,7 @@ source venv/bin/activate
 
 ---
 
-## 3. Instalar dependencias
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -96,27 +96,27 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Ejecución del proyecto
+# Running the Project
 
-## 🔹 1. Iniciar backend (FastAPI)
+## 1. Start Backend (FastAPI)
 
-Desde la raíz del proyecto:
+From the project root:
 
 ```bash
 python -m uvicorn backend.main:app --reload
 ```
 
-Deberías ver:
+Expected output:
 
-```
+```text
 Uvicorn running on http://127.0.0.1:8000
 ```
 
 ---
 
-## 🔹 2. Iniciar frontend (Streamlit)
+## 2. Start Frontend (Streamlit)
 
-En otra terminal (con el entorno activado):
+Open another terminal:
 
 ```bash
 python -m streamlit run frontend/app.py
@@ -124,65 +124,74 @@ python -m streamlit run frontend/app.py
 
 ---
 
-## 🌐 Acceso a la aplicación
+# Application Access
 
-* Frontend:
-  http://localhost:8501
+## Frontend
 
-* Backend (API):
-  http://127.0.0.1:8000
-
-* Documentación automática (Swagger):
-  http://127.0.0.1:8000/docs
-
----
-
-# 🧠 Lógica de Triage
-
-| Prioridad   | Condición                                   |
-| ----------- | ------------------------------------------- |
-| 🔴 ROJO     | Oxígeno < 85 o FC > 130 o síntomas críticos |
-| 🟡 AMARILLO | Oxígeno 85–91 o FC 101–130                  |
-| 🟢 VERDE    | Condiciones estables                        |
-
----
-
-# 🧪 Ejemplo de prueba
-
-Registrar un paciente con:
-
-* Nombre: Juan
-* Edad: 65
-* Frecuencia cardíaca: 140
-* Oxígeno: 82
-
-Resultado esperado:
-
+```text
+http://localhost:8501
 ```
-🔴 ROJO (Crítico)
+
+## Backend API
+
+```text
+http://127.0.0.1:8000
+```
+
+## Swagger Documentation
+
+```text
+http://127.0.0.1:8000/docs
 ```
 
 ---
 
-# 💾 Base de datos
+# Triage Logic
 
-Se utiliza SQLite automáticamente.
+| Priority | Condition |
+|---|---|
+| RED | Oxygen < 85 or heart rate > 130 or critical symptoms |
+| YELLOW | Oxygen 85–91 or heart rate 101–130 |
+| GREEN | Stable conditions |
 
-Archivo generado:
+---
 
+# Example Test Case
+
+Patient data:
+
+- Name: Juan
+- Age: 65
+- Heart Rate: 140
+- Oxygen Level: 82
+
+Expected result:
+
+```text
+RED (Critical)
 ```
+
+---
+
+# Database
+
+The project uses SQLite automatically.
+
+Generated file:
+
+```text
 triage.db
 ```
 
-No requiere configuración adicional.
+No additional configuration is required.
 
 ---
 
-# ⚠️ Problemas comunes
+# Common Issues
 
-## ❌ “uvicorn no es reconocido”
+## Uvicorn Not Recognized
 
-Solución:
+Run:
 
 ```bash
 python -m uvicorn backend.main:app --reload
@@ -190,9 +199,9 @@ python -m uvicorn backend.main:app --reload
 
 ---
 
-## ❌ “streamlit no es reconocido”
+## Streamlit Not Recognized
 
-Solución:
+Run:
 
 ```bash
 python -m streamlit run frontend/app.py
@@ -200,30 +209,39 @@ python -m streamlit run frontend/app.py
 
 ---
 
-## ❌ Error de módulos (backend o imports)
+## Module Import Errors
 
-Asegúrate de:
+Ensure that:
 
-* Ejecutar desde la raíz del proyecto
-* Tener `__init__.py` en la carpeta backend
-
----
-
-# 🚀 Posibles mejoras
-
-* Autenticación de usuarios
-* Base de datos PostgreSQL
-* Dashboard avanzado
-* WebSockets para tiempo real
-* Deploy en la nube (Render, Railway)
+- You are running commands from the project root
+- `__init__.py` exists inside the backend folder
 
 ---
 
-# 👨‍💻 Autor
+# Future Improvements
 
-Proyecto académico de sistema de triage desarrollado con arquitectura cliente-servidor por Camilo Arturo.
+Potential future enhancements:
+
+- User authentication
+- PostgreSQL integration
+- Advanced analytics dashboard
+- Real-time communication with WebSockets
+- Cloud deployment using Render or Railway
 
 ---
 
-# 📄 Licencia
-Uso académico.
+# Challenge
+
+Full-stack triage management challenge developed with a client-server architecture using FastAPI, Streamlit, SQLite, and SQLAlchemy.
+
+---
+
+# Author
+
+Developed by Camilo Arturo.
+
+---
+
+# License
+
+For educational and portfolio purposes.
